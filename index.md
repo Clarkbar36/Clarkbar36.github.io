@@ -8,7 +8,7 @@
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
 
 ---
-[TE Points Change Analysis](/pdf/TE Change.pdf)
+[TE Points Change Analysis](/pdf/TE_Change.pdf)
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
 
 ---
