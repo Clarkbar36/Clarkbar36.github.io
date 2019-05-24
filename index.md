@@ -2,9 +2,9 @@
 
 ---
 
-### Category Name 1 
+### Personal Projects
 
-[Project 1 Title](/sample_page)
+[Pro Baseball Experience](/sample_page)
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
 
 ---
