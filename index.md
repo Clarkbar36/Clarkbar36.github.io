@@ -4,7 +4,7 @@
 
 ### Personal Projects
 
-[Pro Baseball Experience](/sample_page)
+[Pro Baseball Experience]( https://clarkbar36.shinyapps.io/Pro_Baseball_Experience_Hub/)
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
 
 ---
