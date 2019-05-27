@@ -51,8 +51,8 @@ address:
 
 # Education content
 education: 
-  line: 'B.S. Finance, SJFC'
-  - 'M.S. Data Science, SJFC (in progress)'
+  line: B.S. Finance, SJFC
+  - M.S. Data Science, SJFC (in progress)
 
 # Build settings
 markdown: kramdown
