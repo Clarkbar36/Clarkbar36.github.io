@@ -35,7 +35,7 @@ footer:
   copyright: Dr. Henry Jekyll
   location: Location
   social: Around the Web
-  credits: School
+  education: School
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
@@ -50,7 +50,7 @@ address:
   - line: Rochester, NY 14619
 
 # Education content
-credits: 'B.S. Finance - St. John Fisher College (In Progress) M.S. Data Science St. John Fisher College'
+education: 'B.S. Finance - St. John Fisher College (In Progress) M.S. Data Science St. John Fisher College'
 
 # Build settings
 markdown: kramdown
