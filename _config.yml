@@ -50,7 +50,9 @@ address:
   - line: Rochester, NY 14619
 
 # Education content
-education: 'B.S. Finance - St. John Fisher College (In Progress) M.S. Data Science St. John Fisher College'
+education: 
+  - line: B.S. Finance, St. John Fisher College
+  - line: M.S. Data Science, St. John Fisher College (In Progress)
 
 # Build settings
 markdown: kramdown
