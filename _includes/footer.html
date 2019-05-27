@@ -23,7 +23,11 @@
                     </div>
                     <div class="footer-col col-md-4">
                         <h3>{{ site.footer.education }}</h3>
-                        <p>{{ site.education }}</p>
+                        <p> 
+                            {% for school in site.education %}
+                                {{ education.line }} <br>
+		                    {% endfor %}
+                        </p>
                     </div>
                 </div>
             </div>
