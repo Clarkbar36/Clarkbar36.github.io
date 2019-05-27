@@ -1,12 +1,14 @@
 ---
+
 layout: default
 modal-id: 1
 date: 2019-5-15
 img: cake.png
 alt: image-alt
 project-date: May 2019
-client: PBE
-category: Shiny Application
-description: This app is used to track players performances in an Out of the Park simulation league. I built this from .csv files directly out of the game. Each tab has a different set fo visulizations that show different aspects of the league's history. The github can be found here: <a href="https://github.com/Clarkbar36/Pro-Baseball-Experience">PBE Github</a>
+client: Start Bootstrap
+category: Web Development
+description: This app is used to track players performances in an Out of the Park simulation league. I built this from .csv files directly out of the game. Each tab has a different set fo visulizations that show different aspects of the league's history. The github can be found here: <a href="https://github.com/Clarkbar36/Pro-Baseball-Experience">PBE Github</a>!
+
 
 ---
