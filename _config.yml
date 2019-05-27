@@ -1,4 +1,4 @@
-# Site settings
+t# Site settings
 title: Alex Clark - Data Analyst
 email: alexclark36@gmail.com
 url: https://Clarkbar36.github.io
@@ -35,7 +35,7 @@ footer:
   copyright: Dr. Henry Jekyll
   location: Location
   social: Around the Web
-  credits: Credits
+  education: Education
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
@@ -49,8 +49,8 @@ address:
   - line: 74 Colgate Street
   - line: Rochester, NY 14619
 
-# Credits content
-credits: 'Freelancer is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.'
+# Education content
+education: 'B.S. Finance - St. John Fisher College (In Progress) M.S. Data Science St. John Fisher College'
 
 # Build settings
 markdown: kramdown
