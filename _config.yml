@@ -50,7 +50,7 @@ address:
   - line: Rochester, NY 14619
 
 # Credits content
-school: 'B.S. in Finance from St. John Fisher College, M.S. in Data Science from St. John Fisher College (In Progress)'
+school: 'B.S. in Finance from SJFC       M.S. in Data Science from St. John Fisher College (In Progress)'
 
 # Build settings
 markdown: kramdown
