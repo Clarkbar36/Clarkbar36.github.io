@@ -2,7 +2,7 @@ t# Site settings
 title: Alex Clark - Data Analyst
 email: alexclark36@gmail.com
 url: https://Clarkbar36.github.io
-description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
+description: ""
 keywords: "data,analysis,R,Python,SQL,Big Data,Tableau,Shiny,Excel"
 skills: "Data: Wrangler - Cleaner - Modeler - Visualizer - Problem Solver"
 meta_author: Clark Alex
