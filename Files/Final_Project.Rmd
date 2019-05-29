@@ -1,0 +1,186 @@
+---
+title: "STAT 741 Final Project"
+author: "Alex Clark"
+header-includes:
+  - \usepackage[dvipsnames]{xcolor}
+  - \definecolor{darkblue}{gray}{0.45}
+  - \definecolor{darkblue}{RGB}{65,105,225}
+  
+output:
+  pdf_document: default
+---
+
+```{r setup, include=FALSE, echo=FALSE}
+require("knitr")
+library(tidyverse)
+library(pander)
+library(broom)
+library(GGally)
+library(olsrr)
+library(mctest)
+library(MASS)
+library(alr3)
+library(car)
+opts_knit$set(root.dir = "~/Box/Alissa Private Folder/Alex/STAT741/Final Project")
+```
+
+## *I. Research Topic*
+
+I will be attempting to predict the number of wins for a team in a single Major League Baseball season. Predicting wins is crucial for an MLB team to gauge where they think the team currently is and what targets they should be looking at acquiring. Two indicators that seems to stand out as predictors of wins will be runs scored (R) total and earned run average (ERA). The runs scored will attempt to predict the offenses contribution and conversely the ERA will attempt to predict the defenses contribution. My theory is the teams with a larger runs scored and lower ERA will have a larger number of wins, and teams with a lower runs scored and higher ERA will have a smaller number of wins.
+
+
+## *II. Data Collection/Data Source*
+
+The data for my final project be using MLB data back to 1962. I am using back to 1962 because that is when the MLB went to a standard 162 game schedule for each team in both leagues. I will be using each team’s Runs (R) total for the season and their Earned Run Average (ERA) for the season. These will be my 2 predictor variables, and wins will be my response variable. I have the data via Sean Lahman, who maintains a database of MLB stats back to the 1800s on his website. The data I am using will have 1,517 data points. The data does not need to be cleaned or transformed in anyway. I will be using R to conduct my analysis.
+
+### Data:
+```{r, echo=FALSE, results='asis'}
+teams <- read.csv("Teams.csv")
+teams.subset <- subset(teams, teams$yearID >= 1962)
+teams.subset <- teams.subset[c(9,15,29)]
+kable(head(teams.subset,3), align = 'c')
+```
+
+### Summary of Data:
+```{r, echo=FALSE, results='asis'}
+kable(summary(teams.subset))
+```
+
+\pagebreak 
+
+### Plot - Correlation of Data:
+
+```{r, echo=FALSE}
+ggpairs(teams.subset)
+```
+
+
+Overall, the data looks to have a linear relationship and is properly correlated to my expectations. Runs should be positively correlated to wins, and ERA should be negatively correlated to wins.
+
+## *III. Method of Analysis*
+
+The model will be using R and ERA to predict W. The assumption is taken that every team will play at least 162 games, some teams may play 163 games depending on tie-breakers. The model will only be looking at MLB data, this does not include minor leagues, international leagues or international tournaments. The model will be a linear regression model. To check the validity of the model I will be looking at R2, residual plots, QQ plot, confidence intervals, and also checking the model for multicollinearity.  
+
+
+```{r}
+wins.lm <- lm(W ~ R + ERA, data = teams.subset)
+wins.lm
+```
+
+### Linear Regression Equation:
+```{r, echo=FALSE}
+x1 <- round(wins.lm$coefficients[[1]],2)
+x2 <- round(wins.lm$coefficients[[2]],2)
+x3 <- round(wins.lm$coefficients[[3]],2)
+```
+
+$\hat{y}$ = `r toString(x1)` + `r toString(x2)`$_R$ `r toString(x3)`$_{ERA}$
+
+### Summary of Model:
+```{r}
+summary(wins.lm)
+```
+
+```{r, echo=FALSE}
+t_values<-round(summary(wins.lm)[["coefficients"]][, "t value"],2)
+R.t <- t_values[2]
+ERA.t <- t_values[3]
+
+p_values <- summary(wins.lm)[["coefficients"]][, "Pr(>|t|)"]
+R.p <- p_values[2]
+ERA.p <- p_values[3]
+```
+
+Runs t-value: `r toString(R.t)`, Runs p-value: `r toString(R.p)`  
+
+ERA t-value: `r toString(ERA.t)`, ERA p-value: `r toString(ERA.p)`  
+
+$R^{2}$: 87%, $R^{2}_{ADJ}$: 87%  
+
+These all indicate the variables are significant and this model is strong.  
+
+### ANOVA:
+```{r, echo=FALSE}
+df.anova <- pureErrorAnova(wins.lm)
+anova_table_obj <- tidy(df.anova) 
+pander(anova_table_obj, digits = 4)
+```
+
+\pagebreak
+
+## *IV. Results*
+
+
+```{r, echo=FALSE}
+avPlots(wins.lm,marginal.scale=TRUE, ellipse=list(levels=0.5))
+```
+
+Both variables are linear. Runs are positive and ERA is negative. Both variables add value to the model.
+
+### T-Distribution % Confidence Interval
+
+```{r, echo=FALSE}
+tdist <- abs(qt(.025,length(teams.subset$W)-2))
+print(paste("T =", round(tdist,4)))
+pander(confint(wins.lm, conf.level=0.95))
+```
+
+
+```{r, echo=FALSE}
+res <- resid(wins.lm)
+qqnorm(res, ylab="residuals", main = "Normal Probability Plot")
+qqline(res)
+```
+
+The residuals are linear.
+
+```{r, echo=FALSE}
+yhat <- wins.lm$fitted.values
+plot(yhat,res, main = "Residuals vs Fitted Values")
+abline(h=0)
+```
+
+The data might be slightly tailed to the right, but overall it looks to be distributed properly.
+
+
+```{r, echo=FALSE}
+ols_plot_resid_lev(wins.lm)
+```
+
+It looks like a few data points are outliers and leveraging the model. The next step is to remove those points.
+
+```{r}
+teams.subset <- teams.subset[-c(15,968,961,457,453,462,842,928,780,791,798,814,802,911,
+                                826,760,1116,758,1115,446,449,442,462),]
+wins.lm2 <- lm(W ~ R + ERA, data = teams.subset)
+summary(wins.lm2)
+```
+
+### Re-run plot with points removed.
+```{r, echo=FALSE}
+ols_plot_resid_lev(wins.lm2)
+```
+
+### Check for Multicollinearity
+
+```{r, echo=FALSE}
+X <- teams.subset[,2:3]
+omcdiag(X,teams.subset$W)
+imcdiag(X,teams.subset$W)
+```
+
+No collinearity detected from either test.  
+
+This model looks good to predict wins from an estimated runs total and ERA for the season. The few points we removed were unexpected, but removing them from the model appears to have strengthen it. Overall it appears that the linear model is the correct choice of a model.
+
+## *V. Conclusion*
+
+This model looks to be reliable to predict MLB wins from projected runs scored and ERA. I think more variables would be good to help predict wins, but would I would worry about overfitting. Alot of baseball statistics are dependent on other statistics. ERA seems to have a large effect on win totals, which makes sense, the less runs you allow the more likely it is you will win.
+
+## *VI. References*
+
+**Data Collected from:** [SeanLahman.com](http://www.seanlahman.com/baseball-archive/statistics/)
+
+## *VII. Appendices*
+
+**Dataset and code can be found on my GitHub:** [GitHub](https://github.com/Alex-Clark36/STAT741/tree/master)

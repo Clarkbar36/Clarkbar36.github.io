@@ -1,0 +1,270 @@
+Group SMH GLOBAL OP SUMMARY,CCA
+001 Medicine,4310
+001 Medicine,4500
+001 Medicine,4550
+001 Medicine,4560
+001 Medicine,4740
+001 Medicine,5500
+001 Medicine,6500
+001 Medicine,6501
+001 Medicine,6650
+001 Medicine,6720
+002 Cardio-Vascular Services,4570
+002 Cardio-Vascular Services,4590
+002 Cardio-Vascular Services,4600
+002 Cardio-Vascular Services,4610
+002 Cardio-Vascular Services,4620
+002 Cardio-Vascular Services,4630
+002 Cardio-Vascular Services,4640
+002 Cardio-Vascular Services,4670
+002 Cardio-Vascular Services,4680
+002 Cardio-Vascular Services,4690
+002 Cardio-Vascular Services,4940
+002 Cardio-Vascular Services,4580
+002 Cardio-Vascular Services,4700
+002 Cardio-Vascular Services,4660
+003a Surgery,6740
+003a Surgery,6750
+003a Surgery,6780
+003b NeuroSurgery,6770
+003b NeuroSurgery,6810
+003c ENT,6380
+003c ENT,6390
+003c ENT,6400
+003c ENT,6440
+004 OB/GYN,6020
+004 OB/GYN,6040
+005 Pediatrics,4321
+005 Pediatrics,4800
+005 Pediatrics,4810
+005 Pediatrics,4811
+005 Pediatrics,4812
+005 Pediatrics,4820
+005 Pediatrics,4840
+005 Pediatrics,4850
+005 Pediatrics,4860
+005 Pediatrics,4880
+005 Pediatrics,6210
+005 Pediatrics,6220
+005 Pediatrics,6230
+005 Pediatrics,1971
+005 Pediatrics,1972
+005 Pediatrics,1981
+005 Pediatrics,1982
+006 Orthopedics,5000
+006 Orthopedics,5020
+006 Orthopedics,5030
+006 Orthopedics,6560
+006 Orthopedics,6570
+006 Orthopedics,6600
+006 Orthopedics,6610
+006 Orthopedics,6630
+006 Orthopedics,6660
+006 Orthopedics,6670
+006 Orthopedics,6680
+007 Neurology,4400
+007 Neurology,4410
+007 Neurology,4411
+007 Neurology,4412
+007 Neurology,4420
+007 Neurology,4440
+007 Neurology,4460
+007 Neurology,4470
+007 Neurology,4480
+007 Neurology,6100
+007 Neurology,6120
+007 Neurology,6200
+007 Neurology,4413
+007a Stroke Services,6110
+008 Psychiatry,7000
+008 Psychiatry,7010
+008 Psychiatry,7011
+008 Psychiatry,7030
+008 Psychiatry,7040
+008 Psychiatry,7050
+008 Psychiatry,7230
+008 Psychiatry,7260
+008 Psychiatry,7270
+008 Psychiatry,7320
+008 Psychiatry,7340
+008 Psychiatry,7400
+008 Psychiatry,7430
+008 Psychiatry,7450
+008 Psychiatry,7500
+008 Psychiatry,7510
+008 Psychiatry,7580
+008 Psychiatry,7800
+008 Psychiatry,7830
+008 Psychiatry,7850
+008 Psychiatry,7999
+009 Rehabilitation,5040
+009 Rehabilitation,5060
+009 Rehabilitation,5080
+009 Rehabilitation,5100
+009 Rehabilitation,5110
+009 Rehabilitation,6240
+009 Rehabilitation,6250
+009 Rehabilitation,6300
+010 Radiology,4000
+010 Radiology,4020
+010 Radiology,4040
+010 Radiology,4050
+010 Radiology,4060
+010 Radiology,4070
+010 Radiology,4080
+010 Radiology,4090
+010 Radiology,4100
+010 Radiology,4110
+010 Radiology,4120
+011 Cancer Center,1960
+011 Cancer Center,2950
+011 Cancer Center,4900
+011 Cancer Center,4910
+011 Cancer Center,4920
+011 Cancer Center,4950
+011 Cancer Center,4960
+011 Cancer Center,4970
+011 Cancer Center,4980
+011 Cancer Center,4990
+011 Cancer Center,1950
+011 Cancer Center,1970
+011 Cancer Center,2930
+011a Cancer Center Interlakes,2920
+012 Pharmacy,4160
+012 Pharmacy,4170
+012 Pharmacy,4180
+012 Pharmacy,4220
+012 Pharmacy,4200
+012 Pharmacy,4210
+012 Pharmacy,4230
+012a Pharmacy Interlakes,2810
+012a Pharmacy Interlakes,2820
+013 Emergency Medicine,2000
+013 Emergency Medicine,2010
+013a Urgent Care Satellite Offices,2200
+013a Urgent Care Satellite Offices,2210
+014 Clinical Lab & Path,3000
+014 Clinical Lab & Path,3030
+014 Clinical Lab & Path,3040
+014 Clinical Lab & Path,3060
+014 Clinical Lab & Path,3070
+014 Clinical Lab & Path,3150
+014 Clinical Lab & Path,3160
+014 Clinical Lab & Path,3180
+014 Clinical Lab & Path,3200
+014 Clinical Lab & Path,3220
+014 Clinical Lab & Path,3240
+014 Clinical Lab & Path,3260
+014 Clinical Lab & Path,3280
+014 Clinical Lab & Path,3300
+014 Clinical Lab & Path,3320
+014 Clinical Lab & Path,3330
+014 Clinical Lab & Path,3360
+014 Clinical Lab & Path,3380
+014 Clinical Lab & Path,3420
+014 Clinical Lab & Path,3080
+014 Clinical Lab & Path,3340
+014 Clinical Lab & Path,3998
+014 Clinical Lab & Path,3999
+015 O.R./PeriOp Svcs,4250
+015 O.R./PeriOp Svcs,4260
+015 O.R./PeriOp Svcs,4320
+015 O.R./PeriOp Svcs,4340
+015a ASC - Sawgrass,4330
+015b ASC - Strong West,4350
+017 Anesthesiology,6580
+018 Dentistry,6480
+019 Dermatology,6520
+020 Dialysis,1821
+020 Dialysis,4520
+021 Occ Med,6410
+022 Ophthalmology,6420
+022 Ophthalmology,6999
+023 Respiratory Care,4380
+024 Urology,4360
+024 Urology,6460
+025 Other,4490
+025 Other,6550
+025 Other,6640
+025 Other,5590
+025 Other,6900
+026 Nursing Units,1351
+026 Nursing Units,1410
+026 Nursing Units,1420
+026 Nursing Units,1430
+026 Nursing Units,1440
+026 Nursing Units,1450
+026 Nursing Units,1470
+026 Nursing Units,1500
+026 Nursing Units,1510
+026 Nursing Units,1530
+026 Nursing Units,1540
+026 Nursing Units,1550
+026 Nursing Units,1560
+026 Nursing Units,1600
+026 Nursing Units,1620
+026 Nursing Units,1630
+026 Nursing Units,1640
+026 Nursing Units,1700
+026 Nursing Units,1710
+026 Nursing Units,1720
+026 Nursing Units,1730
+026 Nursing Units,1740
+026 Nursing Units,1820
+026 Nursing Units,1830
+026 Nursing Units,1840
+026 Nursing Units,1850
+026 Nursing Units,1880
+026 Nursing Units,1100
+026 Nursing Units,1300
+026 Nursing Units,1310
+026 Nursing Units,1320
+026 Nursing Units,1460
+026 Nursing Units,1610
+026 Nursing Units,1860
+027 Primary Care,2300
+027 Primary Care,2310
+027 Primary Care,2320
+027 Primary Care,2330
+027 Primary Care,2340
+027 Primary Care,2350
+027 Primary Care,2360
+027 Primary Care,2370
+027 Primary Care,2380
+027 Primary Care,2390
+027 Primary Care,2400
+027 Primary Care,2410
+027 Primary Care,2420
+027 Primary Care,2430
+027 Primary Care,2440
+027 Primary Care,2450
+027 Primary Care,2460
+027 Primary Care,2470
+027 Primary Care,2500
+027 Primary Care,2480
+027 Primary Care,2490
+027 Primary Care,2560
+No Summary Groups,9960
+No Summary Groups,9980
+005 Pediatrics,4252
+005 Pediatrics,4813
+005 Pediatrics,4814
+008 Psychiatry,7520
+008 Psychiatry,7530
+008 Psychiatry,7540
+008 Psychiatry,7550
+008 Psychiatry,7560
+008 Psychiatry,7570
+025 Other,4720
+025 Other,6751
+005 Pediatrics,4801
+027 Primary Care,2230
+012 Pharmacy,2830
+012 Pharmacy,2850
+012 Pharmacy,2910
+013a Urgent Care Satellite Offices,2220
+019 Dermatology,6521
+019 Dermatology,6522
+019 Dermatology,6523
+019 Dermatology,6524
+003a Surgery,6752
